@@ -39,18 +39,19 @@ Concluído
 
 <p>Evolução do projeto ao longo do Bootcamp:</p>
 <ul>
-<li><a href="https://github.com/dimasdevspro/Launchstore">Início do projeto<a></li>
-<li><a href="https://github.com/dimasdevspro/Launchstore_Cadastro_User">Cadastro de Usuário<a></li>
+<li><a href="https://github.com/dimasdevspro/Launchstore">Início do projeto</a></li>
+<li><a href="https://github.com/dimasdevspro/Launchstore_Cadastro_User">Cadastro de Usuário</a></li>
+<li><a href="https://github.com/dimasdevspro/Launchstore_Acess_User">Acesso do Usuário</a></li>
 </ul>
 
 ### Demonstração da Aplicação 
 [↩](#indice)
 
-<h1 align="center"><img src="screenshots/Launchstore_acess_user1.gif" height="350" weigth="350"></h1>
+<!-- <h1 align="center"><img src="screenshots/Launchstore_acess_user1.gif" height="350" weigth="350"></h1>
 <h1 align="center"><img src="screenshots/Launchstore_acess_user2.gif" height="350" weigth="350"></h1>
 <h1 align="center"><img src="screenshots/Launchstore_acess_user3.gif" height="350" weigth="350"></h1>
-<h1 align="center"><img src="screenshots/Launchstore_acess_user4.gif" height="350" weigth="350"></h1>
-
+<h1 align="center"><img src="screenshots/Launchstore_acess_user4.gif" height="350" weigth="350"></h1> -->
+<p>Em desenvolvimento</p>
 
 ### Pré-requisitos 
 [↩](#indice)
@@ -80,10 +81,10 @@ $ https://code.visualstudio.com/
 # Acesse o terminal/cmd de sua plataforma (Win, Linux, etc)
 
 # Clone este repositório com o seguinte comando abaixo
-$ git clone https://github.com/dimasdevspro/Launchstore_Acess_User
+$ git clone https://github.com/dimasdevspro/Launchstore_Acess_User_Advanced
 
 # Ainda no terminal, acesse a pasta com mais um comando
-$ cd Launchstore_Acess_User
+$ cd Launchstore_Acess_User_Advanced
 
 # Agora digite este comando, para editar/testar o projeto
 $ code .
