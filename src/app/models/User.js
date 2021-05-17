@@ -1,10 +1,9 @@
 const Base = require('./Base')
 
 Base.init({table: 'users'})
+
 const User = {
-...Base,
+    ...Base,
 }
 
-module.exports = {
-    User
-}
+module.exports = User
