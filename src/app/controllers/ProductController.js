@@ -1,7 +1,9 @@
+const { unlinkSync } = require("fs");
 const Category = require("../models/Category");
 const Product = require("../models/Product");
 const File = require("../models/File");
 const { formatPrice, date } = require("../../lib/utils");
+const { files } = require("../models/Product");
 
 module.exports = {
   all() {
@@ -55,7 +57,7 @@ module.exports = {
       });
 
       const filesPromise = req.files.map((file) =>
-        File.create({ ...file, product_id })
+        File.create({ name: file.filename, path: file.path, product_id })
       );
       await Promise.all(filesPromise);
 
@@ -176,9 +178,20 @@ module.exports = {
 } catch (error) {
     console.error(error);
 }
-  },
-  async delete(req, res) {
-    await Product.delete(req.body.id);
+},
+async delete(req, res) {
+  
+  const files = await Product.files(req.body.id)
+  await Product.delete(req.body.id);
+
+   files.map((file) => {
+    try {
+      unlinkSync(file.path);
+    } catch (err) {
+      console.error(err);
+    }
+  });
+
 
     return res.redirect("/products/create");
   },

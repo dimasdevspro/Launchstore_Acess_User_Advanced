@@ -75,7 +75,11 @@ const Base = {
     }
   },
   async delete(id){
-        return db.query(`DELETE FROM ${this.table} WHERE id = $1', [id]`)
+      try {
+        return db.query(`DELETE FROM ${this.table} WHERE id = $1`, [id])
+      } catch (error) {
+        console.error(error)
+      }
 }
 }
 module.exports = Base;
