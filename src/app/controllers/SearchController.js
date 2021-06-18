@@ -30,7 +30,7 @@ module.exports = {
                 if (!found)
                 categoriesFiltered.push(category)
             }, [])
-console.log({ products, search, categories })
+
     return res.render("search/index", { products, search, categories })
 }catch(err){
    console.error(err)
