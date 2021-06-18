@@ -3,7 +3,7 @@ const { unlinkSync } = require("fs");
 const { formatCep, formatCpfCnpj } = require("../../lib/utils");
 const User = require("../models/User");
 const Product = require("../models/Product");
-
+const LoadProductService = require('../services/LoadProductService')
 module.exports = {
   registerForm(req, res) {
     return res.render("user/register");
@@ -109,4 +109,11 @@ module.exports = {
       });
     }
   },
+  async ads(req, res){
+    const products = await LoadProductService.load('products', {
+      where: {user_id: req.session.userId}
+    })
+  
+    return res.render("user/ads", {products})
+  }
 };
